@@ -1,0 +1,5 @@
++1) Spring Boot with port in .yaml
+2) Spring security
+    1) login_page.html
+    2) Static resource view in spring
+    3) Spring Security
