@@ -3,3 +3,5 @@
     1) login_page.html
     2) Static resource view in spring
     3) Spring Security
+3) Web Socket chat
+4) Store chat history in DB (Mongo?)
