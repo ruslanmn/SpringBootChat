@@ -7,4 +7,7 @@
         2) Login from DB
     4) Registration
 3) Web Socket chat
-4) Store chat history in DB (Mongo?)
+    +) One room chat
+    *) Multiple room chat
+    *) Chat history
+4) Store chat history in MongoDB
