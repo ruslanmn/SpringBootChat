@@ -14,7 +14,7 @@ public class FakeRest {
         return "Hello world";
     }
 
-    @GetMapping("/chat")
+    @GetMapping("/hello")
     public String chat(Authentication authentication) {
         return "Hello, " + authentication.getName();
     }

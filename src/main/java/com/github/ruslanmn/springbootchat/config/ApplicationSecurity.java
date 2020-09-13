@@ -13,17 +13,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
     @Autowired
     public void initialize(AuthenticationManagerBuilder builder) throws Exception {
-        builder.inMemoryAuthentication().withUser("u1").password(passwordEncoder().encode("1")).roles("USER");
+        builder.inMemoryAuthentication()
+                .withUser("u1").password(passwordEncoder().encode("1")).roles("USER")
+                .and()
+                .withUser("u2").password(passwordEncoder().encode("2")).roles("USER");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .httpBasic()
-                .and().formLogin().defaultSuccessUrl("/chat", true)
+                .formLogin().defaultSuccessUrl("/chat.html", true)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/chat").hasRole("USER")
+                .antMatchers("/chat.html").hasRole("USER")
                 .anyRequest().authenticated();
     }
 

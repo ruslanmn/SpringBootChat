@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <style>
+        div {
+            font-size: 130%;
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+<body>
+    <div id="chatHistory" style="overflow: auto; max-height: 500px; min-height: 500px; background: blue">
+    </div>
+
+    <textarea id="messageText" placeholder="Your message..." rows="5" cols="60"></textarea><br>
+    <button id="send">Send</button>
+</body>
+</html>
