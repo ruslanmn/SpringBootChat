@@ -22,10 +22,9 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .formLogin().defaultSuccessUrl("/chat.html", true)
+                .formLogin().defaultSuccessUrl("/rooms.html", true)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/chat.html").hasRole("USER")
                 .anyRequest().authenticated();
     }
 
